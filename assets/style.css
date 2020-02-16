@@ -1,0 +1,21 @@
+
+header {
+    font-family: 'Yeseva One', cursive;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: black;
+}
+
+content {
+    font-family: 'Rozha One', serif;
+}
+
+.aside {
+    float: left;
+    min-width: 30%;
+    height: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
