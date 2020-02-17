@@ -31,27 +31,39 @@
     </header>
     <div class="content">
         <div class="aside">
-            <div class="row mb-3">
-                <h3>Search for a City:</h3>
+            <div class="row mb-1">
+                <h4>Search for a City:</h4>
             </div>
             <div class="row">
-                <input placeholder="City">
-                <div class="searchBtn" type="button"><i class="fas fa-search"></i></div>
+                <input id="searchBar" class="p-1" placeholder="City...">
+                <div class="searchBtn"><i class="fas fa-search"></i></div>
             </div>
-            <div class="row container">
-                <div class="row">city</div>
-                <div class="row">city</div>
-                <div class="row">city</div>
-            </div>
+            <ul id="searchHistory" class="col-12 shadow-sm">
+            </ul>
         </div>
-        <div class="col-8">
-            <div class="row">city info</div>
-            <div class="row">Forecast here</div>
-            <div class="row">
-                <div class="card">Day info</div>
-                <div class="card">Day info</div>
-                <div class="card">Day info</div>
-                <div class="card">Day info</div>
+        <div id="cityInfo" class="container-fluid">
+            <h3 id="dispCity" class="row" data-name="">Machupichu (43/53/12)</h3>
+            <div id="temp" class="row" data-value="">Temperature:</div>
+            <div id="humidity" class="row" data-value="">Humidity:</div>
+            <div id="windSpeed" class="row" data-value="">Wind Speed:</div>
+            <div id="uv" class="row" data-value="">UV Index:</div>
+        </div>
+        <h3>5-Day Forecast:</h3>
+        <div id="forecast" class="row">
+            <div class="card">Day info more more more more
+                <div class="row"></div>
+            </div>
+            <div class="card">Day info Day info more more more more
+
+            </div>
+            <div class="card">Day infoDay info more more more more
+
+            </div>
+            <div class="card">Day infoDay info more more more more
+
+            </div>
+            <div class="card">Day infoDay info more more more more
+
             </div>
         </div>
     </div>

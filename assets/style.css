@@ -7,15 +7,94 @@ header {
     background-color: black;
 }
 
-content {
+.content {
     font-family: 'Rozha One', serif;
 }
 
 .aside {
     float: left;
-    min-width: 30%;
-    height: 100%;
-    padding: 10px;
+    min-width: 25vw;
+    height: 100vh;
+    padding: 20px 20px 20px 30px;
     margin-right: 10px;
-    margin-left: 5px;
+    background-color: #F8F9FA;
+    position: static;
 }
+
+.searchBtn {
+    position: relative;
+    top: 3px;
+    left: 4%;
+}
+
+.searchBtn i:hover {
+    font-size: 25px;
+    transition: all .3s ease-in-out;
+}
+
+#searchBar {
+    border-radius: 15px;
+    text-indent: 5%;
+    margin-bottom: 10px;
+    border: thin;
+    font-size: 1.2rem;
+}
+
+#searchHistory {
+    background-color: white;
+    border-radius: 45px;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#searchHistory li {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+#cityInfo {
+    width: 73vw;
+    padding-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    border: #F8F9FA;
+    border-width: thin;
+    border-style: solid;
+    position: relative;
+    left: 12.5vw;
+    top: 1vh;
+}
+
+#cityInfo div {
+    position: relative;
+    right: 10vw;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+#dispCity {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#forecast {
+    width: 73vw;
+}
+
+#forecast div {
+    background-color: lightblue;
+    color: white;
+    margin: 15px;
+    padding: 10px;
+    max-width: 16%;
+}
+
+
+@media (max-width: 400px) {
+    .aside {
+        min-width: 50vw;
+    }
+} 
