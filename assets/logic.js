@@ -2,9 +2,12 @@
 $(document).ready(function() {
     // ajax request vars
     var cityVar = "";
+    var lat = "";
+    var lon = "";
     const api_key = "bfa2edb3854eb69c605b1ee877b198e2";
     var weatherURL;
     var forecastURL;
+    var date = moment().format('MMM Do YY');
     
     // index var for local storage
     var cityIndex;
@@ -56,6 +59,24 @@ $(document).ready(function() {
         })
         .then(function(response) {
             console.log(response);
+            console.log(response.coord.lat);
+            lon = response.coord.lon;
+            lat = response.coord.lat;
+            $("#dispCity").text(`${response.name}  (${date})`);
+            var tempF = ((response.main.temp - 273.15) * 9/5 + 32).toPrecision(2);
+            var tempC = (response.main.temp - 273.15).toPrecision(2);
+            $("#temp").text(`Temperature:  ${tempF}\u00B0F / ${tempC}\u00B0C`);
+            $("#humidity").text(`Humidity:  ${response.main.humidity}%`);
+            $("#windSpeed").text(`Wind Speed:  ${response.wind.speed} MPH`);
+        });
+
+        uviURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${api_key}&lon=${lon}&lat=${lat}`; 
+        $.ajax({
+            url: uviURL 
+        })
+        .then(function(response) {
+            console.log(response);
+            $("#uv").text(`UV Index:  ${reponse.value}`);
         });
     
         $.ajax({
@@ -64,7 +85,7 @@ $(document).ready(function() {
         .then(function(response) {
             console.log(response);
         });
-    })
+    });
 
     
 })
