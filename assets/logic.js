@@ -119,7 +119,6 @@ $(document).ready(function() {
             url: forecastURL 
         })
         .then(function(response) {
-            console.log(response);
             for (let i=0; i<$forecast.length; i++) {
                 $forecast[i].children[0].textContent = moment().add(i+1, "days").format('MMM Do YY');
                 $forecast[i].children[1].setAttribute("data-name", response.list[i*8].weather[0].main);
@@ -134,7 +133,6 @@ $(document).ready(function() {
 
     $(".aside").on("click", ".history", function() {
         cityVar = this.innerHTML;
-        console.log(cityVar);
         weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityVar}&appid=${api_key}`;
         forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityVar}&appid=${api_key}`;
         
