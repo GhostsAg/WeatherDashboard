@@ -59,7 +59,7 @@ header {
     padding-bottom: 15px;
     margin-top: 0px;
     margin-bottom: 25px;
-    border: #F8F9FA;
+    border: rgba(212, 218, 219, 0.664);
     border-width: thin;
     border-style: solid;
     position: relative;
@@ -80,6 +80,15 @@ header {
     text-align: center;
 }
 
+#uv {
+    position: relative;
+    left: 10px;
+    top: -5px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 #forecast {
     width: 73vw;
 }
@@ -92,9 +101,7 @@ header {
     max-width: 16%;
 }
 
-
-@media (max-width: 400px) {
-    .aside {
-        min-width: 50vw;
-    }
-} 
+.card div {
+    position: relative;
+    left: -20px;
+}
