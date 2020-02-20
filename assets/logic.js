@@ -49,6 +49,9 @@ $(document).ready(function() {
             else if (icon == "Rain") {
                 $forecast[i].children[1].setAttribute("class", "fas fa-cloud-rain");
             }
+            else if (icon == "Snow") {
+                $forecast[i].children[1].setAttribute("class", "far fa-snowflake")
+            }
             else {
                 $forecast[i].children[1].setAttribute("class", "fas fa-wrench");  
             }
